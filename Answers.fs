@@ -25,7 +25,7 @@ Q1. How many values does the F# Unit type have?
 0 or 1 are allowed answers
 (Q1 is a function that must return the answer)
 *)
-let q1() : int = failwithf "Not answered"
+let q1() : int = 1
 
 
 (*
@@ -35,7 +35,7 @@ Q2. The F# type constructor -> has what associativity?
 2 = associativity does not apply to type constructors
 (Q2 is a function that must return the correct answer)
 *)
-let q2() : int = failwithf "Not answered"
+let q2() : int = 1
 
 
 
@@ -44,14 +44,16 @@ Q3. The output list is twice the length of the input list. Each input list eleme
 in the output, twice. E.g [1;2;5] -> [1;1;2;2;5;5].
 You are not allowed to use list indexing (.[] or List.item) in your answer.
 *)
-let q3 (lst: int list) : int list = failwithf "Not answered"
+let q3 (lst: int list) : int list = List.collect (fun x-> [x;x]) lst                        
 
-
+let result = q3 [1;2;3;4;5;6;7]
 (*
 Q4. The output is the sum of all the elements in all the input lists.
 Recursive functions are not allowed in the answer.
 *)
-let q4 (lsts: int list list) : int = failwithf "Not answered"
+let q4 (lsts: int list list) : int = 
+
+let result = q4 [[1;2;3;4;5;6;7];[1;2;34]]                                 
 
 
 
